@@ -74,18 +74,17 @@
         cursor: pointer;
         background-color: var(--color-grey-light-2);
     }
- 
+ --color-complete-dark
     &__icon-box {
-      
         display: flex;
-        align-items: center;
-
+        align-items: top;
+        fill: var(--color-grey-light-2);
+        position: relative;
     }
 
     &__icon {
         height: 3rem;
         width: 3rem;
-        fill: var(--color-grey-dark-2);
     }
 
     &__user-photo {
@@ -104,7 +103,7 @@
     border-radius: 50%;
     background-color: var(--color-primary);
     color: #fff;
-
+    // position: absolute;
     top: 1.5rem;
     right: 1.1rem;
 
