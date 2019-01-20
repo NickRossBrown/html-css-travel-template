@@ -1,5 +1,5 @@
-.logo {
-    height: 2rem;
+.header-logo {
+    height: 5rem;
     margin-left: 3rem;
 }
 
@@ -58,13 +58,34 @@
 .user-nav {
     background-color: rgb(86, 179, 101);
 
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+           }
+    & > *:hover {
+        padding: 0 2rem;
+        cursor: pointer;
+        background-color: var(--color-grey-light-2);
+    }
+ 
     &__icon-box {
+      
+        display: flex;
+        align-items: center;
 
     }
 
     &__icon {
         height: 3rem;
         width: 3rem;
+        fill: var(--color-grey-dark-2);
     }
 
     &__user-photo {
@@ -75,5 +96,21 @@
     &__user-name {
 
     }
+
+    &__notification {
+    font-size: .8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #fff;
+
+    top: 1.5rem;
+    right: 1.1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 }
