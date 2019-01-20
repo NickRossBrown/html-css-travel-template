@@ -46,9 +46,13 @@ body {
   min-height: 50rem; }
 
 .header {
+  font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(-color-grey-dark-1); }
+  border-bottom: var(-color-grey-dark-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .content {
   display: flex; }
@@ -60,3 +64,51 @@ body {
 .hotel-view {
   background-color: #5f5f5f;
   flex: 1; }
+
+.logo {
+  height: 2rem;
+  margin-left: 3rem; }
+
+.search {
+  font-size: 1.5rem;
+  display: flex;
+  flex: 0 0 40%;
+  align-items: center;
+  justify-content: center; }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 75px;
+    width: 90%;
+    transition: all .2s; }
+    .search__input:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3); }
+      .search__input:focus:focus {
+        outline: none; }
+      .search__input:focus:active {
+        transform: translateY(4px); }
+      .search__input:focus::-webkit-input-placeholder {
+        font-weight: 150;
+        color: var(--color-grey-light-4); }
+  .search__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+    margin-right: -3.5rem; }
+  .search__icon {
+    height: 3rem;
+    width: 2rem; }
+
+.user-nav {
+  background-color: #56b365; }
+  .user-nav__icon {
+    height: 3rem;
+    width: 3rem; }
+  .user-nav__user-photo {
+    height: 4rem;
+    border-radius: 40%; }

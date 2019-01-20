@@ -1,34 +1,78 @@
 .logo {
-    height: 3.25rem;
+    height: 2rem;
+    margin-left: 3rem;
 }
 
 .search {
+    font-size: 1.5rem;
+    display: flex;
+    flex: 0 0 40%;
 
+    align-items: center;
+    justify-content: center;
     &__input {
+        font-family: inherit; 
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 75px;
+        width: 90%;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+
+            &:focus {
+                outline: none;
+            }
+
+            &:active {
+                transform: translateY(4px);
+            }
+
+            &::-webkit-input-placeholder {
+                font-weight: 100;
+                color: var(--color-grey-light-4);
+            }
+        }
 
     }
 
     &__button {
-
+        border: none;
+        background-color: var(--color-grey-light-2);
+        margin-right: -3.5rem;
     }
 
     &__icon {
-
+        height: 3rem;
+        width: 2rem;
     }
 }
 
 
 .user-nav {
+    background-color: rgb(86, 179, 101);
 
     &__icon-box {
 
     }
 
     &__icon {
-
+        height: 3rem;
+        width: 3rem;
     }
 
     &__user-photo {
+        height: 4rem;
+        border-radius: 40%;
+    }
+    
+    &__user-name {
 
     }
 
