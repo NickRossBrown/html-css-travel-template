@@ -1,6 +1,33 @@
 .header-logo {
-    height: 5rem;
-    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    background-color: #56b365;
+
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__item-box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        fill: var(--color-primary-dark);
+        position: relative;
+        margin-top: 20px;
+    }
+
+
+     &__logo-item {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    
 }
 
 .search {
@@ -101,7 +128,7 @@
         height: 1.75rem;
         width: 1.75rem;
         border-radius: 50%;
-        background-color: var(--color-primary);
+        background-color: var(--color-primary-dark);
         color: #fff;
         // position: absolute;
         top: 1.5rem;
@@ -117,10 +144,33 @@
 .side-nav {
     font-size: 2.25rem;
     list-style: none;
-    margin-top: 3rem,
+    margin-top: 3rem;
 
     &__item {
-        
+        position: relative;
+    }
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary-dark);
+        transform: scaleY(0);
+        transition: transform .2s,
+                    width .4s cubic-bezier(1,0,0,1) .2s,
+                    background-color .1s;
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item:active::before {
+        background-color: var(--color-primary-light);
     }
 
     &__link:link,
@@ -131,6 +181,11 @@
         display: block;
         padding: 1.5rem 1rem;
         fill: currentColor;
+        position: relative;
+        z-index: 11;
+
+        display: flex;
+        align-items: center;
 
     }
 

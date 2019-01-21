@@ -16,7 +16,17 @@
 	<body>
 		<div class="container">
 			<header class="header">
-				<img class="header-logo" src="img/logo.png" alt="page logo" />
+                <div class="header-logo">
+                    <div class="header-logo__item-box">
+                        <svg class="header-logo__logo-item">
+                            <use xlink:href="img/sprite.svg#icon-sigma" />
+                        </svg>
+         
+                        <svg class="header-logo__logo-item">
+                            <use xlink:href="img/sprite.svg#icon-infinite" />
+                        </svg>    
+                    </div> 
+                </div>
 
 				<form action="#" class="search">
 					<input
@@ -65,7 +75,7 @@
 			<div class="content">
                 <nav class="sidebar">
                     <ul class="side-nav">
-                        <li class="side-nav__item">
+                        <li class="side-nav__item side-nav__item--active">
                             <a href="#" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-home"></use>
